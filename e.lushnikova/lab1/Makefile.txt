@@ -1,0 +1,8 @@
+main1: main1.o
+	gcc main1.o -o main1
+
+main1.o: main1.c
+	gcc -Wall -c main1.c
+
+clean:
+	rm main1 main1.o

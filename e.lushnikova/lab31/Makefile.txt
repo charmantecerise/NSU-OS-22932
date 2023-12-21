@@ -1,0 +1,16 @@
+all: client server
+
+client: client.o
+	gcc client.o -o client
+
+server: server.o
+	gcc server.o -o server
+
+client.o: client.c
+	gcc -Wall -c client.c
+
+server.o: server.c
+	gcc -Wall -c server.c
+
+clear:
+	rm *.o client server
